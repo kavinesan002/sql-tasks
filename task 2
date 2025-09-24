@@ -1,0 +1,19 @@
+create database task;
+use task;
+create table emp3(
+id int,
+name varchar(30),
+department varchar(30),
+salary decimal(10,2),
+city varchar(30));
+select * from emp3;
+insert into emp3(id,name,department,salary,city)values(
+1,'kavi','HR',40000.9,'chennai'),
+(2,'ajay','IT',3000,'coimbatore'),
+(3,'karthi','HR',5000,'bangalore'),
+(4,'bala','HR',40000,'trichy'),
+(5,'siva','finance',77000,'madurai');
+select * from emp3;
+select count(id),department from emp3 group by department;
+select avg(salary),department from emp3 group by department;
+select max(salary) as maxSalary from emp3;
